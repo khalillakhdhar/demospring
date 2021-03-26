@@ -2,6 +2,7 @@ package com.projet.demospring.controller;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
@@ -35,7 +36,14 @@ public class HomeController {
 		
 		return "user";
 	}
-	
+	@RequestMapping(value="send",method =RequestMethod.POST )
+	public String result(HttpServletRequest req,Model m)
+	{
+		String nom="Bonjour "+req.getParameter("nom");
+		m.addAttribute("nom",nom);
+		
+		return "myform";
+	}
 	
 	
 }

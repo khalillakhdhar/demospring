@@ -9,6 +9,10 @@
 <body>
 <form action="send" method="post">
 Nom:<input type="text" name="nom">
+<input type="submit" value="envoyer">
+<br>${nom}
+<br>
+
 </form>
 </body>
 </html>
